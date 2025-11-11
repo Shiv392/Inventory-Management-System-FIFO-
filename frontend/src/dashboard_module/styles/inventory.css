@@ -1,0 +1,113 @@
+/* Container padding */
+.inventory-container {
+  padding: 1rem;
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+  max-height: 40vh;
+  overflow-y:  auto;
+}
+
+/* Title styling */
+.inventory-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: fixed;
+  
+}
+
+/* Emoji size */
+.inventory-title span {
+  font-size: 2rem;
+}
+
+/* Responsive wrapper for horizontal scroll */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table basic style */
+.inventory-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header row background */
+.inventory-table thead {
+  background-color: #f3f4f6;
+}
+
+/* Header cell style */
+.inventory-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+/* Right aligned header cells */
+.inventory-table th.quantity,
+.inventory-table th.total-cost,
+.inventory-table th.avg-cost {
+  text-align: right;
+}
+
+/* Body cell style */
+.inventory-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Right aligned body cells */
+.inventory-table td.quantity,
+.inventory-table td.total-cost,
+.inventory-table td.avg-cost {
+  text-align: right;
+}
+
+/* Hover effect on rows */
+.inventory-table tbody tr:hover {
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Empty state styling */
+.empty-row td {
+  text-align: center;
+  font-style: italic;
+  color: #6b7280;
+  padding: 2rem 1rem;
+}
+
+/* Loading and error message */
+.message {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ef4444; /* red-500 */
+}
+
+/* Responsive text sizes */
+@media (max-width: 640px) {
+  .inventory-title {
+    font-size: 1.25rem;
+  }
+  .inventory-title span {
+    font-size: 1.5rem;
+  }
+  .inventory-table th,
+  .inventory-table td {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
