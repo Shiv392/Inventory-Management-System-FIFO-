@@ -1,13 +1,17 @@
+import { BrowserRouter, Router } from 'react-router-dom';
 import './App.css';
-import Login_page from './authentication_module/pages/login_page';
+import Auth_Routes from './authentication_module/Auth_Routes';
+import Dashboard_Routes from './dashboard_module/dashboard_routes';
+import Admin_Routes from './admin_module/admin_routes';
 
 
 function App() {
   return (
-    <>
-     <h1 className="text-3xl font-bold text-blue-600">Hello Tailwind!</h1>
-     <Login_page />
-    </>
+     <BrowserRouter>
+      <Auth_Routes />
+      <Dashboard_Routes />
+      <Admin_Routes />
+     </BrowserRouter>
   )
 }
 

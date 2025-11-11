@@ -15,6 +15,7 @@ const Login = () => {
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Login</h2>
 
         <form className="flex flex-col" onSubmit={handleSubmit}>
+        <div>
           <input
             type="email"
             className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 
@@ -24,7 +25,9 @@ const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+        </div>
 
+        <div className="my-2">
           <input
             type="password"
             className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 
@@ -34,26 +37,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-
-          <div className="flex items-center justify-between flex-wrap">
-            <label
-              htmlFor="remember-me"
-              className="text-sm text-gray-900 cursor-pointer"
-            >
-              <input type="checkbox" id="remember-me" className="mr-2" />
-              Remember me
-            </label>
-            <a href="#" className="text-sm text-blue-500 hover:underline mb-0.5">
-              Forgot password?
-            </a>
-          </div>
-
-          <p className="text-gray-900 mt-4">
-            Don't have an account?{" "}
-            <a href="#" className="text-sm text-blue-500 hover:underline">
-              Signup
-            </a>
-          </p>
+        </div>
 
           <button
             type="submit"
